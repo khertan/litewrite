@@ -1,0 +1,40 @@
+{
+  "name": "litewrite",
+  "version": "0.0.1",
+  "description": "Distraction-free writing notes with Sync.",
+  "dependencies": {
+    "gulp": "^3.5.6",
+    "gulp-sass": "^1.3.3",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "gulp-closure-compiler": "^0.3.0",
+    "gulp-util": "^2.2.14",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": [
+    "com.ionic.keyboard",
+    "cordova-plugin-globalization",
+    "cordova-plugin-x-socialsharing",
+    {
+      "locator": "https://github.com/jcesarmobile/FilePicker-Phonegap-iOS-Plugin",
+      "id": "com.jcesarmobile.filepicker"
+    },
+    "cordova-plugin-console",
+    "cordova-plugin-inappbrowser",
+    "cordova-plugin-whitelist",
+    {
+      "locator": "https://github.com/Initsogar/cordova-webintent",
+      "id": "com.borismus.webintent"
+    }
+  ],
+  "cordovaPlatforms": [
+    {
+      "platform": "android",
+      "locator": "https://github.com/apache/cordova-firefoxos"
+    }
+  ]
+}

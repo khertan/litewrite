@@ -2,7 +2,7 @@
     "cordova-plugin-inappbrowser": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-inappbrowser"
+            "id": "cordova-plugin-inappbrowser@~1.1.0"
         },
         "is_top_level": true,
         "variables": {}
@@ -10,7 +10,25 @@
     "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-whitelist@1"
+            "id": "cordova-plugin-whitelist@~1.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.borismus.webintent": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Initsogar/cordova-webintent",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.virtualartifacts.webintent": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/florentvaldelievre/virtualartifacts-webintent",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

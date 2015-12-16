@@ -28,24 +28,49 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
+
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        document.addEventListener('resume', app.handleIntent, false);
+        app.handleIntent();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
         console.log('Received Event: ' + id);
-    }
+    },
+
+    handleIntent: function() {
+        /*if (window.plugins && window.plugins.webintent) {
+            window.plugins.webintent.getExtra(window.plugins.webintent.EXTRA_TEXT, function (url) {
+                if (url) {
+                    var doc = new Doc();
+                    doc.content = url;
+                    doc.updateTitle();
+                    litewrite.openOnCreate(doc)
+                    alert(url);}
+                }, function() { //Fail
+                    //console.log('no ')
+                });
+        } */ 
+        /*webintent.onNewIntent(function(intent, test) {
+                  console.log("new intent event detected", intent, test);
+                        webintent.hasExtra(webintent.EXTRA_TEXT, function(hasExtra) {
+                                    if(hasExtra){
+                                                  console.log("Intent passed, handling that way");
+                                                          }
+                                          });
+                            });
+
+            //handle app invoke via activity
+                window.plugins.webintent.getUri(function(invokeUrl) {
+                      console.log("[INTENT] handleAndroidOpen: " +
+                     invokeUrl);});
+        */
+    }    
 };
 
 app.initialize();

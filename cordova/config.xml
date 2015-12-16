@@ -25,4 +25,5 @@
     </platform>
     <plugin name="cordova-plugin-inappbrowser" spec="~1.1.0" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
+    <plugin name="com.virtualartifacts.webintent" spec="https://github.com/florentvaldelievre/virtualartifacts-webintent" />
 </widget>
